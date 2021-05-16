@@ -11,7 +11,7 @@
 
 ### original
 ```
-bash original_random_generate.sh 生成するDAGの数
+bash original_random_generate.sh '生成するDAGの数'
 ```
 - `original_change_option.py` 内でパラメータの範囲を指定できる
 
