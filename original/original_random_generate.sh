@@ -1,6 +1,11 @@
 #!/usr/bin/bash
 
 
+rm ./original_random_dag/50/*
+rm ./original_random_dag/100/*
+rm ./original_random_dag/200/*
+
+
 for ((i=0 ; i<30 ; i++))
 do
 python3 original_change_option.py
@@ -20,4 +25,6 @@ mv original_random_${i}.tgff ./original_random_dag/
 wait
 done
 
-python3 change_dag_name.py
+wait
+
+python3 devide_dag.py

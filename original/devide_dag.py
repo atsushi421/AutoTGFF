@@ -11,99 +11,57 @@ num_two_hundred = 0
 
 for i in range(200):
 
-	dag_path = './random_dag/random_' + str(i) + '.tgff'
-	eps_path = './random_dag/random_' + str(i) + '.eps'
+	dag_path = './original_random_dag/original_random_' + str(i) + '.tgff'
+	eps_path = './original_random_dag/original_random_' + str(i) + '.eps'
+	txt_path = './original_random_dag/original_random_' + str(i) + '.txt'
 
-	# ファイルを開く
-	tgff_file = open(dag_path, "r")
-
+	tgff_file = open(dag_path, "r")  # ファイルを開く
 
 	num_of_node = 0
 
-	# 1行ずつ読み込む
-	for line in tgff_file:
+	for line in tgff_file:  # 1行ずつ読み込む
 
 		# 空行はスキップ
 		if(line == '\n'):
 			continue
 		
-		# 文字列の半角スペース・タブ区切りで区切ったリストを取得
-		line_list = line.split()
+		line_list = line.split()  # 文字列の半角スペース・タブ区切りで区切ったリストを取得
 
 		# TASKの情報の取得
 		if(line_list[0] == 'TASK'):
 			num_of_node += 1
 
-	# ファイルを閉じる
-	tgff_file.close()
+	tgff_file.close()  # ファイルを閉じる
 
 
 	if(num_of_node < 60):
-		dag_rename_path = './random_dag/50/50_' + str(num_fifty) + '.tgff'
-		eps_rename_path = './random_dag/50/50_' + str(num_fifty) + '.eps'
+		dag_rename_path = './original_random_dag/50/original_50_' + str(num_fifty) + '.tgff'
+		eps_rename_path = './original_random_dag/50/original_50_' + str(num_fifty) + '.eps'
+		txt_rename_path = './original_random_dag/50/original_50_' + str(num_fifty) + '.txt'
 		os.rename(dag_path, dag_rename_path)
 		os.rename(eps_path, eps_rename_path)
-  
-		#↓-----ログに生成パラメータを書き込み---------------------
+		os.rename(txt_path, txt_rename_path)
 
-		file_name = 'change_name_log.txt'
-
-		#ログを生成するファイルのパスを生成
-		log_path = './random_dag/' + file_name
-
-
-		#↓-----ログファイルの生成--------------------------------------------------------
-		f = open(log_path, 'a')
-
-		f.write('random_' + str(i) + ' -> 50_' + str(num_fifty) + '\n')
-
-		f.close()  #ファイルを閉じる
-		#↑-----ログに生成パラメータを書き込み---------------------
-  
 		num_fifty += 1
+
+
 	elif(num_of_node < 110):
-		dag_rename_path = './random_dag/100/100_' + str(num_one_hundred) + '.tgff'
-		eps_rename_path = './random_dag/100/100_' + str(num_one_hundred) + '.eps'
+		dag_rename_path = './original_random_dag/100/original_100_' + str(num_one_hundred) + '.tgff'
+		eps_rename_path = './original_random_dag/100/original_100_' + str(num_one_hundred) + '.eps'
+		txt_rename_path = './original_random_dag/100/original_100_' + str(num_one_hundred) + '.txt'
 		os.rename(dag_path, dag_rename_path)
 		os.rename(eps_path, eps_rename_path)
-
-		#↓-----ログに生成パラメータを書き込み---------------------
-
-		file_name = 'change_name_log.txt'
-
-		#ログを生成するファイルのパスを生成
-		log_path = './random_dag/' + file_name
-
-
-		#↓-----ログファイルの生成--------------------------------------------------------
-		f = open(log_path, 'a')
-
-		f.write('random_' + str(i) + ' -> 100_' + str(num_one_hundred) + '\n')
-
-		f.close()  #ファイルを閉じる
-		#↑-----ログに生成パラメータを書き込み---------------------
+		os.rename(txt_path, txt_rename_path)
 
 		num_one_hundred += 1
+
+
 	else:
-		dag_rename_path = './random_dag/200/200_' + str(num_two_hundred) + '.tgff'
-		eps_rename_path = './random_dag/200/200_' + str(num_two_hundred) + '.eps'
+		dag_rename_path = './original_random_dag/200/original_200_' + str(num_two_hundred) + '.tgff'
+		eps_rename_path = './original_random_dag/200/original_200_' + str(num_two_hundred) + '.eps'
+		txt_rename_path = './original_random_dag/200/original_200_' + str(num_two_hundred) + '.txt'
 		os.rename(dag_path, dag_rename_path)
 		os.rename(eps_path, eps_rename_path)
-
-		#↓-----ログに生成パラメータを書き込み---------------------
-
-		file_name = 'change_name_log.txt'
-
-		#ログを生成するファイルのパスを生成
-		log_path = './random_dag/' + file_name
-
-
-		#↓-----ログファイルの生成--------------------------------------------------------
-		f = open(log_path, 'a')
-
-		f.write('random_' + str(i) + ' -> 200_' + str(num_two_hundred) + '\n')
-
-		f.close()  #ファイルを閉じる
-		#↑-----ログに生成パラメータを書き込み---------------------
+		os.rename(txt_path, txt_rename_path)
 
 		num_two_hundred += 1
