@@ -9,7 +9,7 @@
 
 ## 使い方
 
-### original
+### original algorithm
 1. .sh ファイルと同じ場所に `original_random_dag` ディレクトリを作成し, その下に `50, 100, 200` ディレクトリを作成する
 2. `bash original_random_generate.sh '生成するDAGの数'`
 
