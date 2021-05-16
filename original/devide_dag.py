@@ -2,14 +2,18 @@
 
 
 import os
+import sys
 
+
+args = sys.argv
+num_of_dag = int(args[1])  # DAGの数を受け取る
 
 num_fifty = 0
 num_one_hundred = 0
 num_two_hundred = 0
 
 
-for i in range(200):
+for i in range(num_of_dag):
 
 	dag_path = './original_random_dag/original_random_' + str(i) + '.tgff'
 	eps_path = './original_random_dag/original_random_' + str(i) + '.eps'

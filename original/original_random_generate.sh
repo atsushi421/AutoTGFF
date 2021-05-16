@@ -6,7 +6,7 @@ rm ./original_random_dag/100/*
 rm ./original_random_dag/200/*
 
 
-for ((i=0 ; i<30 ; i++))
+for ((i=0 ; i<$1 ; i++))
 do
 python3 original_change_option.py
 python3 original_get_parameter.py
@@ -27,4 +27,4 @@ done
 
 wait
 
-python3 devide_dag.py
+python3 devide_dag.py $1

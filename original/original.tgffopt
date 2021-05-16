@@ -1,6 +1,6 @@
-seed 233
-start_node 5 1
-task_degree 3 2
+seed 541
+start_node 2 1
+task_degree 4 3
 task_cnt 100 1
 tg_cnt 1
 prob_multi_start_nodes 1.0
