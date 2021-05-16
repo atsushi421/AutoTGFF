@@ -31,6 +31,5 @@
 - series_wid <int><int>  : 直列鎖の幅
 - series_local_xover <int>  : 直列鎖間でランダムに接続されるエッジの数
 - series_global_xover <int>  : series_must_rejoin が true の場合の, 開始ノードからエンドノードに接続されるエッジの数
-  - 直列鎖の長さと幅を0に設定した場合, series_global_xover で指定した数のエッジのみを持つランダムなDAGが生成される
-
+    - 直列鎖の長さと幅を0に設定した場合, series_global_xover で指定した数のエッジのみを持つランダムなDAGが生成される
 ```
