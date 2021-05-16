@@ -6,6 +6,16 @@
 - 周期的なDAG・非周期的なDAGのどちらも生成可能
 - （参考）https://robertdick.org/projects/tgff/index.html
 
+
+## 使い方
+
+### original
+```
+bash original_random_generate 生成するDAGの数
+```
+- `original_change_option.py` 内でパラメータの範囲を指定できる
+
+
 ## TGFFパラメータ
 
 ### 共通パラメータ
